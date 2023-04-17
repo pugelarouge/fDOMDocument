@@ -247,7 +247,7 @@ namespace TheSeer\fDOM {
          * @return integer bytes saved
          */
         #[\ReturnTypeWillChange]
-        public function save($filename, $options = NULL) {
+        public function save($filename, $options = 0) {
             $tmp = parent::save($filename, $options);
             if (!$tmp) {
                 throw new fDOMException("Saving XML to file '$filename' failed", fDOMException::SaveError);
