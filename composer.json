@@ -10,6 +10,9 @@
             "role": "lead"
         }
     ],
+    "replace": {
+        "theseer/fdomdocument": "self.version" 
+    },
     "require": {
         "php": ">=5.3.3",
         "ext-dom": "*",
