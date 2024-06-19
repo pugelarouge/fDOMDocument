@@ -183,9 +183,9 @@ namespace TheSeer\fDOM {
          *
          * @throws fDOMException
          *
-         * @return boolean
+         * @return bool
          */
-        public function loadHTMLFile($fname, $options = NULL) {
+        public function loadHTMLFile($fname, $options = 0) {
             if ($fname === '') {
                 throw new fDOMException('empty filename is not allowed', fDOMException::ParseError);
             }
