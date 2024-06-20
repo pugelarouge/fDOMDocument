@@ -137,6 +137,7 @@ namespace TheSeer\fDOM {
          *
          * @return bool|mixed
          */
+        #[\ReturnTypeWillChange]
         public function load($fname, $options = LIBXML_NONET) {
             if ($fname === '') {
                 throw new fDOMException('empty filename is not allowed', fDOMException::ParseError);
@@ -161,6 +162,7 @@ namespace TheSeer\fDOM {
          *
          * @return boolean
          */
+        #[\ReturnTypeWillChange]
         public function loadXML($source, $options = LIBXML_NONET) {
             if ($source === '') {
                 throw new fDOMException('empty string not allowed', fDOMException::ParseError);
@@ -215,9 +217,10 @@ namespace TheSeer\fDOM {
          *
          * @throws fDOMException
          *
-         * @return boolean
+         * @return bool
          */
-        public function loadHTML($source, $options = NULL) {
+        #[\ReturnTypeWillChange]
+        public function loadHTML($source, $options = 0) {
             if ($source === '') {
                 throw new fDOMException('empty string not allowed', fDOMException::ParseError);
             }
